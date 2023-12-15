@@ -31,7 +31,7 @@ gcloud artifacts repositories create valkyrie-repo \
     --description="this is my app"
 # Authenticate docker registry
 gcloud auth configure-docker valkyrie-repo
-docker tag my-app us-central1-docker.pkg.dev/$PROJECT/valkyrie-repo/valkyrie-dev:v0.0.3
+docker tag (source-image or image-id) us-central1-docker.pkg.dev/$PROJECT/valkyrie-repo/valkyrie-dev:v0.0.3
 docker push $REGION-docker.pkg.dev/$PROJECT/valkyrie-repo/valkyrie-dev:v0.0.3
 
 # Task 4. Create and expose a deployment in Kubernetes
