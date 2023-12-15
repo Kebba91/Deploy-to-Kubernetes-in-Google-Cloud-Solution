@@ -37,7 +37,7 @@ docker tag my-app us-central1-docker.pkg.dev/$PROJECT/valkyrie-repo/valkyrie-dev
 docker push $REGION-docker.pkg.dev/$PROJECT/valkyrie-repo/valkyrie-dev:v0.0.3
 
 # Task 4. Create and expose a deployment in Kubernetes
-Get the K8s credentails before deploying
+Get the K8s credentials before deploying
 gcloud container clusters get-credentials cluster-name --zone=ZONE
 # Before creating deployment, ensure that the image name in the deployment.yaml file is modified
 kubectl create deployment valkyrie-app --image=valkyrie:v0.0.3
