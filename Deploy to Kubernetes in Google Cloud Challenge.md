@@ -38,8 +38,11 @@ docker push $REGION-docker.pkg.dev/$PROJECT/valkyrie-repo/valkyrie-dev:v0.0.3
 Get the K8s credentials before deploying
 gcloud container clusters get-credentials cluster-name --zone=ZONE
 # Before creating deployment, ensure that the image name in the deployment.yaml file is modified
-kubectl create deployment valkyrie-app --image=valkyrie:v0.0.3
-kubectl expose pod valkyrie-app --port 80 --target-port:8080 --type LoadBalancer
+kubectl create deployment my-app --image=us-central1-docker.pkg.dev/$PROJECT/valkyrie-repo/valkyrie-dev:v0.0.3
+kubectl expose deployment my-app \
+    --type LoadBalancer \
+    --port 8080 \
+    --target-port 8080
 
 
 # CONGRATULATION, YOU COMPLETED THIS LAB
