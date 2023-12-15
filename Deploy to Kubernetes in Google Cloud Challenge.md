@@ -41,7 +41,7 @@ Get the K8s credentials before deploying
 gcloud container clusters get-credentials cluster-name --zone=ZONE
 # Before creating deployment, ensure that the image name in the deployment.yaml file is modified
 kubectl create deployment valkyrie-app --image=valkyrie:v0.0.3
-kubectl expose pod valkyrie-app --port 8080 --type LoadBalancer
+kubectl expose pod valkyrie-app --port 80 --target-port:8080 --type LoadBalancer
 
 
 # CONGRATULATION, YOU COMPLETED THIS LAB
