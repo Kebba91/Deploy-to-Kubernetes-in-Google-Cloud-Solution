@@ -1,6 +1,4 @@
 # Deploy-to-Kubernetes-in-Google-Cloud-Solution
-
-export Email= PROJECT ID
 export REGION= REGION
 export ZONE = zone
 export PROJECT_ID=$(gcloud config get-value project)
